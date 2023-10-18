@@ -13,20 +13,20 @@ public class Work3 {
 //		(進階功能:加入直角三角形的判斷)
 //		a平方 +b平方 =c平方
 
-		Scanner sc1 = new Scanner(System.in);
-		System.out.println("請輸入三個數字:");
-		int[] x = new int[3]; 
-		int number = sc1.nextInt();
-		
-		if (sc1.hasNextInt()) {
-			for(int i = 0; i < 3; i++) {
-				x[i] = number;
-				if() {
-					
-				}
-			}
-		} else
-			System.out.println("錯誤");
+//		Scanner sc1 = new Scanner(System.in);
+//		System.out.println("請輸入三個數字:");
+//		int[] x = new int[3]; 
+//		int number = sc1.nextInt();
+//		
+//		if (sc1.hasNextInt()) {
+//			for(int i = 0; i < 3; i++) {
+//				x[i] = number;
+//				if() {
+//					
+//				}
+//			}
+//		} else
+//			System.out.println("錯誤");
 
 //================================================================================
 
