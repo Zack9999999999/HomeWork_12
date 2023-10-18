@@ -1,5 +1,6 @@
 package hw3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Work3 {
@@ -7,7 +8,6 @@ public class Work3 {
 	public static void main(String[] args) {
 //		請設計一隻程式,使用者輸入三個數字後,輸出結果會為正三角形、等腰
 //		三角形、其它三角形或不是三角形,如圖示結果:
-//		正三角形:3邊相等    等腰三角形:2邊相等 其他三角形:a + b > c, a + c > b, b + c > a
 //		5 5 5 正三角形	5 8 5 等腰三角形	5 6 7 其他三角形	0 0 0 不是三角形
 //		(提示:Scanner,"三角形成立條件",判斷式if else)
 //		(進階功能:加入直角三角形的判斷)
@@ -15,18 +15,24 @@ public class Work3 {
 
 //		Scanner sc1 = new Scanner(System.in);
 //		System.out.println("請輸入三個數字:");
-//		int[] x = new int[3]; 
-//		int number = sc1.nextInt();
-//		
-//		if (sc1.hasNextInt()) {
-//			for(int i = 0; i < 3; i++) {
-//				x[i] = number;
-//				if() {
-//					
-//				}
-//			}
-//		} else
-//			System.out.println("錯誤");
+//
+//		int[] x = new int[3];
+//
+//		for (int i = 0; i < 3; i++) {
+//			int number = sc1.nextInt();
+//			x[i] = number;
+//		}
+//		Arrays.sort(x);
+//		if (x[0] == x[1] && x[1] == x[2]) {
+//			System.out.println("正三角形");
+//		} else if (x[0] == x[1] && x[2] > x[1]) {
+//			System.out.println("等腰三角形");
+//		} else if (x[0] < x[1] && x[1] < x[2]) {
+//			System.out.println("其他三角形");
+//		} else if(x[0] * x[0] + x[1] * x[1] == x[2] * x[2]) {
+//			System.out.println("直角三角形");
+//		}else
+//			System.out.println("不是三角形");
 
 //================================================================================
 
