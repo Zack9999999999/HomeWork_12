@@ -57,7 +57,7 @@ public class Work1 {
 		System.out.println(5 + '5'); // 數值 + char = 數值,'5'轉成數值 = 53
 		System.out.println(5 + "5"); // 數值串接String
 		
-		System.out.println("sss");
+		System.out.println("test");
 		System.out.println("ddd");
 		System.out.println("ggg");
 }
