@@ -58,5 +58,6 @@ public class Work1 {
 		System.out.println(5 + "5"); // 數值串接String
 		
 		System.out.println("sss");
+		System.out.println("ddd");
 }
 	}
