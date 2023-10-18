@@ -59,5 +59,6 @@ public class Work1 {
 		
 		System.out.println("sss");
 		System.out.println("ddd");
+		System.out.println("ggg");
 }
 	}
