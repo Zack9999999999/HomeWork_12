@@ -86,11 +86,13 @@ public class Work3 {
 		System.out.println("阿文請輸入你討厭哪個數字?");
 
 		int number = sc3.nextInt();
+		
 		for (int x = 1; x <= 49; x++) {
-			if (x == number) {
+			if (x % 10 == number || x / 10 % 10 == number) {
 				continue;
 			} else
-				System.out.print(x + "\t");
+				System.out.print(x + " ");
 		}
+		System.out.println("總共有35數字可選");
 	}
 }
