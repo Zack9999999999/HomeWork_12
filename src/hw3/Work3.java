@@ -15,15 +15,15 @@ public class Work3 {
 
 		Scanner sc = new Scanner(System.in);
 
-		Triangle tri = new Triangle();
+//		Triangle tri = new Triangle();
+//
+//		System.out.println("請輸入三個數字:");
 
-		System.out.println("請輸入三個數字:");
-		
 //1.int[] x 將tri.getThree內得到的陣列儲存起來		
-		int[] x = tri.getThree();
-		
+//		int[] x = tri.getThree();
+
 //2.將int[] x帶入runThreeTime方法內做執行		
-		tri.setThreeTime(x);
+//		tri.setThreeTime(x);
 
 //================================================================================
 
@@ -33,37 +33,37 @@ public class Work3 {
 //		(提示:Scanner,亂數方法,無窮迴圈)
 //		(進階功能:產生0~100亂數,每次猜就會提示你是大於還是小於正確答案)
 
-		System.out.println("開始猜數字吧!");
-
-		while (true) {
-
-			int number = (int) (Math.random() * 10);
-
-			int i = sc.nextInt();
-
-			if (i == number) {
-				System.out.println("答對了! 答案就是 " + i);
-				break;
-			} else
-				System.out.println("猜錯囉");
-		}
+//		System.out.println("開始猜數字吧!");
+//
+//		while (true) {
+//
+//			int number = (int) (Math.random() * 10);
+//
+//			int i = sc.nextInt();
+//
+//			if (i == number) {
+//				System.out.println("答對了! 答案就是 " + i);
+//				break;
+//			} else
+//				System.out.println("猜錯囉");
+//		}
 
 //      進階		
-		int number = (int) (Math.random() * 101);
-
-		while (true) {
-
-			int i = sc.nextInt();
-
-			if (i == number) {
-				System.out.println("答對了! 答案就是 " + i);
-				break;
-			} else if (i < number) {
-				System.out.println("小於正確答案");
-			} else {
-				System.out.println("大於正確答案");
-			}
-		}
+//		int number = (int) (Math.random() * 101);
+//
+//		while (true) {
+//
+//			int i = sc.nextInt();
+//
+//			if (i == number) {
+//				System.out.println("答對了! 答案就是 " + i);
+//				break;
+//			} else if (i < number) {
+//				System.out.println("小於正確答案");
+//			} else {
+//				System.out.println("大於正確答案");
+//			}
+//		}
 
 //		阿文很喜歡簽大樂透(1~49),但他是個善變的人,上次討厭數字是4,但這次他想要依心情決定討
 //		厭哪個數字,請您設計一隻程式,讓阿文可以輸入他不想要的數字(1~9),畫面會顯示他可以選擇
@@ -73,15 +73,49 @@ public class Work3 {
 
 		System.out.println("阿文請輸入你討厭哪個數字?");
 
-		int number1 = sc.nextInt();
+//		int number1 = sc.nextInt();
+//		
+//		int count = 0;
+//		
+//		for (int q = 1; q <= 49; q++) {
+//			if (q % 10 == number1 || q / 10 % 10 == number1) {
+//				continue;
+//			} else {
+//				System.out.print(q + " ");
+//				count++;
+//			}
+//		}
+//					
+//		System.out.println("\n" + "總共有" + count + "數字可選");
 
-		for (int q = 1; q <= 49; q++) {
-			if (q % 10 == number1 || q / 10 % 10 == number1) {
+//		阿文很喜歡簽大樂透(1~49),但他是個善變的人,上次討厭數字是4,但這次他想要依心情決定討
+//		厭哪個數字,請您設計一隻程式,讓阿文可以輸入他不想要的數字(1~9),畫面會顯示他可以選擇
+//		的號碼與總數,如圖:
+//		(提示:Scanner)
+//		(進階挑戰:輸入不要的數字後,直接亂數印出6個號碼且不得重複)
+
+		int[] x = new int[49];
+		int count = 0;
+		int number = sc.nextInt();
+
+		for (int i = 1; i <= 49; i++) {
+			if (i % 10 == number || i / 10 % 10 == number) {
 				continue;
-			} else
-				System.out.print(q + " ");
+			} else {
+				x[count] = i;
+				count++;
+			}
 		}
-		System.out.println("\n" + "總共有35數字可選");
+
+		for (int i = 0; i < count; i++) {
+			System.out.print(x[i] + " ");
+		}
+		System.out.println("\n" + "總共有" + count + "數字可選");
+
+		for (int i = 0; i <= 5; i++) {
+			int rand = (int) (Math.random() * count); // rand = 0 ~ 34 亂數
+			System.out.print(x[rand] + " "); // (有問題)會有重複的數字出現
+		}
 
 	}
 }
