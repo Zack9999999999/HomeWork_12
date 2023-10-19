@@ -19,8 +19,7 @@ public class Work3 {
 //		int[] x = new int[3];
 //
 //		for (int i = 0; i < 3; i++) {
-//			int number = sc1.nextInt();
-//			x[i] = number;
+//			x[i] = sc1.nextInt();
 //		}
 //		Arrays.sort(x);
 //		if (x[0] == x[1] && x[1] == x[2]) {
@@ -29,9 +28,9 @@ public class Work3 {
 //			System.out.println("等腰三角形");
 //		} else if (x[0] < x[1] && x[1] < x[2]) {
 //			System.out.println("其他三角形");
-//		} else if(x[0] * x[0] + x[1] * x[1] == x[2] * x[2]) {
+//		} else if (x[0] * x[0] + x[1] * x[1] == x[2] * x[2]) {
 //			System.out.println("直角三角形");
-//		}else
+//		} else
 //			System.out.println("不是三角形");
 
 //================================================================================
@@ -79,21 +78,19 @@ public class Work3 {
 //		阿文很喜歡簽大樂透(1~49),但他是個善變的人,上次討厭數字是4,但這次他想要依心情決定討
 //		厭哪個數字,請您設計一隻程式,讓阿文可以輸入他不想要的數字(1~9),畫面會顯示他可以選擇
 //		的號碼與總數,如圖:
-//
 //		(提示:Scanner)
 //		(進階挑戰:輸入不要的數字後,直接亂數印出6個號碼且不得重複)
 
-//		Scanner sc3 = new Scanner(System.in);
-//
-//		System.out.println("阿文請輸入你討厭哪個數字?");
+		Scanner sc3 = new Scanner(System.in);
 
-//		int number = sc3.nextInt();
-//
-//		for (int x = 1; x <= 49; x++) {
-//			if (x == number) {
-//				continue;
-//			} else
-//				System.out.print(x + "\t");
-//		}
+		System.out.println("阿文請輸入你討厭哪個數字?");
+
+		int number = sc3.nextInt();
+		for (int x = 1; x <= 49; x++) {
+			if (x == number) {
+				continue;
+			} else
+				System.out.print(x + "\t");
+		}
 	}
 }
