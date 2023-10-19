@@ -1,4 +1,5 @@
 package hw2;
+
 public class Work2 {
 
 	public static void main(String[] args) {
@@ -25,7 +26,6 @@ public class Work2 {
 //        }
 //        System.out.println(y);
 
-		
 //		2.請設計一隻Java程式,計算1~10的連乘積 (1*2*3*...*10) (用for迴圈)
 
 //		int y = 1;
@@ -34,8 +34,7 @@ public class Work2 {
 //			y *= x;
 //		}
 //		System.out.println(y);
-		
-		
+
 //		3.請設計一隻Java程式,計算1~10的連乘積 (1*2*3*...*10) (用while迴圈)
 
 //		int x = 0, y = 0;
@@ -44,8 +43,7 @@ public class Work2 {
 //			y = x * x;
 //		}
 //		System.out.println(y);
-		
-		
+
 //		4.請設計一隻Java程式,輸出結果為以下:
 //		  1 4 9 16 25 36 49 64 81 100
 
@@ -66,11 +64,10 @@ public class Work2 {
 //			x += y;
 //			y += 2;
 //		}
-		
-				
+
 //		5.阿文很熱衷大樂透 (1 ~ 49),但他不喜歡有4的數字,不論是個位數或是十位數。請設計一隻程式,
 //		  輸出結果為阿文可以選擇的數字有哪些?總共有幾個?
-			//4 14 24 34 40~49
+		// 4 14 24 34 40~49
 
 //		int y = 0;
 //		for(int x = 1; x <= 39; x++) {
@@ -82,7 +79,6 @@ public class Work2 {
 //		}
 //		System.out.print("\n" + y + "個");
 
-		
 //		6.請設計一隻Java程式,輸出結果為以下:
 //		  1 2 3 4 5 6 7 8 9 10
 //		  1 2 3 4 5 6 7 8 9
@@ -94,7 +90,7 @@ public class Work2 {
 //		  1 2 3
 //		  1 2
 //		  1
-		
+
 //		int x = 10;
 //		while(x >= 1) {
 //			for(int y = 1; y <= x; y++) {
@@ -104,17 +100,13 @@ public class Work2 {
 //			System.out.println();
 //		}
 //-----------------------------------------------------------------------------------		
-		//out:
 //		for(int x = 10; x >= 1; x--) {
 //			for(int y = 1; y <= x; y++) {
 //				System.out.print(y + " ");
-				//if(x == 1)
-					//break out;
 //			}
 //			System.out.println();
 //		}
-		
-		
+
 //		7.請設計一隻Java程式,輸出結果為以下:
 //			A
 //			BB
@@ -122,7 +114,7 @@ public class Work2 {
 //			DDDD
 //			EEEEE
 //			FFFFFF
-		
+
 //		int z = 1;
 //		for(int x = 65; x <= 70; x++) {
 //			for(int y = 1; y <= z; y++) {
@@ -131,7 +123,16 @@ public class Work2 {
 //			z++;
 //			System.out.println();
 //		}
-		
+//-----------------------------------------------------------------------------------		
+//		char x = 'A';
+//
+//		for (int i = 1; i <= 6; i++) {
+//			for (int j = 0; j < i; j++) {
+//				System.out.print(x);
+//			}
+//			x += 1;
+//			System.out.println();
+//		}
 	}
 
 }

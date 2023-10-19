@@ -18,8 +18,12 @@ public class Work3 {
 //
 //		int[] x = new int[3];
 //
-//		for (int i = 0; i < 3; i++) {
-//			x[i] = sc1.nextInt();
+//		for (int i = 0; i < 3; ) {
+//			if (sc1.hasNextInt()) {
+//				x[i] = sc1.nextInt();
+//				i++;
+//			} else
+//				sc1.next();
 //		}
 //		Arrays.sort(x);
 //		if (x[0] == x[1] && x[1] == x[2]) {
@@ -30,7 +34,7 @@ public class Work3 {
 //			System.out.println("其他三角形");
 //		} else if (x[0] * x[0] + x[1] * x[1] == x[2] * x[2]) {
 //			System.out.println("直角三角形");
-//		} else
+//		} else if (x[0] + x[1] <= x[2])
 //			System.out.println("不是三角形");
 
 //================================================================================
@@ -81,18 +85,18 @@ public class Work3 {
 //		(提示:Scanner)
 //		(進階挑戰:輸入不要的數字後,直接亂數印出6個號碼且不得重複)
 
-		Scanner sc3 = new Scanner(System.in);
-
-		System.out.println("阿文請輸入你討厭哪個數字?");
-
-		int number = sc3.nextInt();
-		
-		for (int x = 1; x <= 49; x++) {
-			if (x % 10 == number || x / 10 % 10 == number) {
-				continue;
-			} else
-				System.out.print(x + " ");
-		}
-		System.out.println("總共有35數字可選");
+//		Scanner sc3 = new Scanner(System.in);
+//
+//		System.out.println("阿文請輸入你討厭哪個數字?");
+//
+//		int number = sc3.nextInt();
+//
+//		for (int x = 1; x <= 49; x++) {
+//			if (x % 10 == number || x / 10 % 10 == number) {
+//				continue;
+//			} else
+//				System.out.print(x + " ");
+//		}
+//		System.out.println("總共有35數字可選");
 	}
 }
