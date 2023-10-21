@@ -112,10 +112,19 @@ public class Work3 {
 		}
 		System.out.println("\n" + "總共有" + count + "數字可選");
 
-		for (int i = 0; i <= 5; i++) {
-			int rand = (int) (Math.random() * count); // rand = 0 ~ 34 亂數
-			System.out.print(x[rand] + " "); // (有問題)會有重複的數字出現
+		for (int i = 0; i <= 5;) {
+			// rand = 0 ~ 34 亂數
+			int rand = (int) (Math.random() * count);
+			
+			//x陣列 從索引0~i 搜rand值
+			int reMove = Arrays.binarySearch(x, 0, i, rand);
+			
+			//負數等於沒搜到
+			if (reMove < 0) {
+				x[i] = rand;
+				System.out.print(x[i] + " ");
+				i++;
+			}
 		}
-
 	}
 }
