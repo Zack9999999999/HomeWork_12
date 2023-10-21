@@ -112,17 +112,22 @@ public class Work3 {
 		}
 		System.out.println("\n" + "總共有" + count + "數字可選");
 
+		//用來存x陣列取出的6個亂數
+		int[] sixNumber = new int[6];	
+
 		for (int i = 0; i <= 5;) {
 			// rand = 0 ~ 34 亂數
 			int rand = (int) (Math.random() * count);
 			
-			//x陣列 從索引0~i 搜rand值
-			int reMove = Arrays.binarySearch(x, 0, i, rand);
+			//將x陣列亂數存入
+			sixNumber[i] = x[rand];
 			
-			//負數等於沒搜到
+									// 哪個陣列, 從索引0, ~ count, 搜x[rand]值
+			int reMove = Arrays.binarySearch(sixNumber, 0, i, x[rand]);
+
+			// 負數等於沒搜到(沒有重複值)
 			if (reMove < 0) {
-				x[i] = rand;
-				System.out.print(x[i] + " ");
+				System.out.print(sixNumber[i] + " ");
 				i++;
 			}
 		}
