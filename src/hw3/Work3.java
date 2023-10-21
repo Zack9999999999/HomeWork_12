@@ -111,7 +111,10 @@ public class Work3 {
 			System.out.print(x[i] + " ");
 		}
 		System.out.println("\n" + "總共有" + count + "數字可選");
-
+		
+		//複製x陣列(用途是把多餘的空元素清理掉 使陣列長度 = count)
+		int[] newX = Arrays.copyOf(x, count);
+					
 		//用來存x陣列取出的6個亂數
 		int[] sixNumber = new int[6];	
 
@@ -120,10 +123,10 @@ public class Work3 {
 			int rand = (int) (Math.random() * count);
 			
 			//將x陣列亂數存入
-			sixNumber[i] = x[rand];
+			sixNumber[i] = newX[rand];
 			
 									// 哪個陣列, 從索引0, ~ count, 搜x[rand]值
-			int reMove = Arrays.binarySearch(sixNumber, 0, i, x[rand]);
+			int reMove = Arrays.binarySearch(sixNumber, 0, i, newX[rand]);
 
 			// 負數等於沒搜到(沒有重複值)
 			if (reMove < 0) {
