@@ -33,7 +33,7 @@ public class Work4 {
 //		int x = 0; // 母音數量
 //		String y = "";
 //		for (int i = 0; i < eight.length; i++) {
-//			y += eight[i]; // 疑問:為什麼這樣是串接?//
+//			y += eight[i];
 //		}
 //		for(int i = 0; i < y.length(); i++) {
 //			char aeiou = y.charAt(i);
