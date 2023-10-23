@@ -30,6 +30,8 @@ public class Work4 {
 //			System.out.print(helloWorld);
 //		}
 
+//		System.out.println("\n" + "===================================");
+		
 //	有個字串陣列如下 (八大行星)：
 //	{“mercury”, “venus”, “earth”, “mars”, “jupiter”, “saturn”, “uranus”, “neptune”}
 //	請用程式計算出這陣列裡面共有多少個母音(a, e, i, o, u) 
@@ -80,6 +82,8 @@ public class Work4 {
 //		}
 //		System.out.println("共 " + howMany + " 人!");
 
+//		System.out.println("\n" + "===================================");
+		
 //		請設計由鍵盤輸入三個整數，分別代表西元yyyy年，mm月，dd日，執行後會顯示是該年的第幾天
 //		例：輸入 1984 9 8 三個號碼後，程式會顯示「輸入的日期為該年第252天」
 //		(提示1：Scanner，陣列)
@@ -184,7 +188,8 @@ public class Work4 {
 //
 //		}
 //		System.out.println("輸入的日期為該年第: " + day + "天");
-
+		
+//		System.out.println("\n" + "===================================");
 		
 //		班上有8位同學，他們進行了6次考試結果如下：
 //		請算出每位同學考最高分的次數
@@ -201,7 +206,7 @@ public class Work4 {
 							{90, 80, 100, 75, 50, 20, 99, 75}
 						  };
 		
-		int[] max = new int[8];
+		int[] max = new int[8]; // 存最高分用
 		
 		max[0] = student[0][0];
 		
@@ -213,7 +218,7 @@ public class Work4 {
 				}
 			}
 				for(int j = 0; j < student[i].length; j++) {
-					if(max[i] == student[i][j]) {
+					if(max[i] == student[i][j]) { // 把max對應到是哪位學生挑出來
 						top[j]++;
 					}
 				}
