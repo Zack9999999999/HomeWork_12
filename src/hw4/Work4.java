@@ -90,105 +90,19 @@ public class Work4 {
 //		(提示2：需將閏年條件加入)公元年份為4的倍數但非100的倍數，為366天閏年。
 //		(提示3：擋下錯誤輸入：例如月份輸入為2，則日期不該超過29)
 
-//		int[] three = new int[3];
-//
-//		int day = 0; // 存天數
-//
-//		for (int i = 0; i < 3; i++) {
-//			three[i] = sc.nextInt();
-//
-//			if (three[0] % 4 == 0 && three[0] % 100 != 0) {
-//				if (i == 1) {
-//					switch (three[i]) {
-//					case 1:
-//						day = 0;
-//						break;
-//					case 2:
-//						day = 29;
-//						break;
-//					case 3:
-//						day = 31 + 28;
-//						break;
-//					case 4:
-//						day = 31 + 31 + 28;
-//						break;
-//					case 5:
-//						day = 30 + 31 + 31 + 28;
-//						break;
-//					case 6:
-//						day = 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 7:
-//						day = 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 8:
-//						day = 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 9:
-//						day = 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 10:
-//						day = 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 11:
-//						day = 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					case 12:
-//						day = 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//						break;
-//					}
-//				} 
-//			}
-//			if (i == 1) {
-//				switch (three[i]) {
-//				case 1:
-//					day = 0;
-//					break;
-//				case 2:
-//					day = 28;
-//					break;
-//				case 3:
-//					day = 31 + 28;
-//					break;
-//				case 4:
-//					day = 31 + 31 + 28;
-//					break;
-//				case 5:
-//					day = 30 + 31 + 31 + 28;
-//					break;
-//				case 6:
-//					day = 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 7:
-//					day = 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 8:
-//					day = 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 9:
-//					day = 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 10:
-//					day = 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 11:
-//					day = 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				case 12:
-//					day = 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 31 + 28;
-//					break;
-//				}
-//			} else if (i == 2) {
-//				day += three[i];
-//				if (three[1] == 2 && three[2] > 29) {
-//					System.out.println("沒有這個天數");
-//					return;
-//				}
-//			}
-//
-//		}
-//		System.out.println("輸入的日期為該年第: " + day + "天");
+		int[] three = new int[3];
 		
+		February28 feb = new February28();
+		February29 feb2 = new February29();
+
+		for (int i = 0; i < 3; i++) {
+			three[i] = sc.nextInt();		
+		}
+		if(three[0] % 4 == 0 && three[0] % 100 != 0) { // 閨年
+			feb2.setFeb(three);
+		}else
+			feb.setFeb(three);
+				
 //		System.out.println("\n" + "===================================");
 		
 //		班上有8位同學，他們進行了6次考試結果如下：
