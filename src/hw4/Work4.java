@@ -12,9 +12,9 @@ public class Work4 {
 	public static void main(String[] args) {
 
 //		Work4One one = new Work4One();
-
+//
 //		one.avg();
-
+//
 //		System.out.println("\n" + "===================================");
 
 //	請建立一個字串，經過程式執行後，輸入結果是反過來的
@@ -31,7 +31,7 @@ public class Work4 {
 //		}
 
 //		System.out.println("\n" + "===================================");
-		
+
 //	有個字串陣列如下 (八大行星)：
 //	{“mercury”, “venus”, “earth”, “mars”, “jupiter”, “saturn”, “uranus”, “neptune”}
 //	請用程式計算出這陣列裡面共有多少個母音(a, e, i, o, u) 
@@ -83,66 +83,64 @@ public class Work4 {
 //		System.out.println("共 " + howMany + " 人!");
 
 //		System.out.println("\n" + "===================================");
-		
+
 //		請設計由鍵盤輸入三個整數，分別代表西元yyyy年，mm月，dd日，執行後會顯示是該年的第幾天
 //		例：輸入 1984 9 8 三個號碼後，程式會顯示「輸入的日期為該年第252天」
 //		(提示1：Scanner，陣列)
 //		(提示2：需將閏年條件加入)公元年份為4的倍數但非100的倍數，為366天閏年。
 //		(提示3：擋下錯誤輸入：例如月份輸入為2，則日期不該超過29)
-		
+
 		NewFeb feb = new NewFeb();
-		
+
 		int[] three = new int[3];
-		
-		for(int i = 0; i < 3; i++) {
-		three[i] = sc.nextInt();
+
+		for (int i = 0; i < 3; i++) {
+
+			three[i] = sc.nextInt();
 		}
-		
+
 		feb.f(three);
-		
-		
-		
+
 //		System.out.println("\n" + "===================================");
-		
+
 //		班上有8位同學，他們進行了6次考試結果如下：
 //		請算出每位同學考最高分的次數
 //		(提示：二維陣列)
-		
-		int[] top = new int[8]; //統計次數
-		
-		int[][] student = {
-							{10, 35, 40, 100, 90, 85, 75, 70},
-							{37, 75, 77, 89, 64, 75, 70, 95},
-							{100, 70, 79, 90, 75, 70, 79, 90},
-							{77, 95, 70, 89, 60, 75, 85, 89},
-							{98, 70, 89, 90, 75, 90, 89, 90},
-							{90, 80, 100, 75, 50, 20, 99, 75}
+
+		int[] top = new int[8]; // 統計次數
+
+		int[][] student = { { 10, 35, 40, 100, 90, 85, 75, 70 },
+							{ 37, 75, 77, 89, 64, 75, 70, 95 },
+							{ 100, 70, 79, 90, 75, 70, 79, 90 },
+							{ 77, 95, 70, 89, 60, 75, 85, 89 },
+							{ 98, 70, 89, 90, 75, 90, 89, 90 },
+							{ 90, 80, 100, 75, 50, 20, 99, 75 }
 						  };
-		
+
 		int[] max = new int[8]; // 存最高分用
-		
+
 		max[0] = student[0][0];
-		
-		for(int i = 0; i < student.length; i++) {
-			
-			for(int j = 0; j < student[i].length; j++) {
-				if(student[i][j] > max[i]) {
-						max[i] = student[i][j]; // 比max大就替換掉
+
+		for (int i = 0; i < student.length; i++) {
+
+			for (int j = 0; j < student[i].length; j++) {
+				if (student[i][j] > max[i]) {
+					max[i] = student[i][j]; // 比max大就替換掉
 				}
 			}
-				for(int j = 0; j < student[i].length; j++) {
-					if(max[i] == student[i][j]) { // 把max對應到是哪位學生挑出來
-						top[j]++;
-					}
+			for (int j = 0; j < student[i].length; j++) {
+				if (max[i] == student[i][j]) { // 把max對應到是哪位學生挑出來
+					top[j]++;
 				}
+			}
 			System.out.println();
 		}
 		System.out.println("每位同學考最高分的次數: ");
 		System.out.println("1號" + " 2號" + " 3號" + " 4號" + " 5號" + " 6號" + " 7號" + " 8號");
-		
-		for(int i = 0; i < top.length; i++) {
+
+		for (int i = 0; i < top.length; i++) {
 			System.out.print(top[i] + "次 ");
 		}
-		
+
 	}
 }
