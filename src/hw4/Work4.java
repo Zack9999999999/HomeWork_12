@@ -89,20 +89,19 @@ public class Work4 {
 //		(提示1：Scanner，陣列)
 //		(提示2：需將閏年條件加入)公元年份為4的倍數但非100的倍數，為366天閏年。
 //		(提示3：擋下錯誤輸入：例如月份輸入為2，則日期不該超過29)
-
+		
+		NewFeb feb = new NewFeb();
+		
 		int[] three = new int[3];
 		
-		February28 feb = new February28();
-		February29 feb2 = new February29();
-
-		for (int i = 0; i < 3; i++) {
-			three[i] = sc.nextInt();		
+		for(int i = 0; i < 3; i++) {
+		three[i] = sc.nextInt();
 		}
-		if(three[0] % 4 == 0 && three[0] % 100 != 0) { // 閨年
-			feb2.setFeb(three);
-		}else
-			feb.setFeb(three);
-				
+		
+		feb.f(three);
+		
+		
+		
 //		System.out.println("\n" + "===================================");
 		
 //		班上有8位同學，他們進行了6次考試結果如下：
