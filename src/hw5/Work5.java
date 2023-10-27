@@ -55,25 +55,21 @@ public class Work5 {
 //	}
 //	
 	public double maxElement(double x[][]) {
-		double big = 0;
-		int j = 0;
-
+		double max = 0;
+		
 		for (int i = 0; i < x.length; i++) {
 			Arrays.sort(x[i]);
 		}
-		for (int i = 0; i < x.length; i++) {
-
+		for(int i = 0; i < x[i].length - 1; i++) {
+			max = x[i][i];
 		}
-
-		return big;
+		return max;
 	}
 
 //5.身為程式設計師的你，收到一個任務，要幫系統的註冊新增驗證碼的功能，請設計一個方法
 //genAuthCode()，當呼叫此方法時，會回傳一個8位數的驗證碼，此驗證碼內容包含了英文大小寫
 //與數字的亂數組合，如圖
 
-	
-	
 	public static void main(String[] args) {
 
 //1.請設計一個方法為starSquare(int width, int height)，當使用者鍵盤輸入寬與高時，
@@ -90,14 +86,14 @@ public class Work5 {
 
 		w.randAvg();
 
+		System.out.println("================================================");
+
 //3.利用Overloading，設計兩個方法int maxElement(int x[][])與double maxElement(double x[][])，
 //可以找出二維陣列的最大值並回傳，如圖：
 
-		int[][] intArray = { { 1, 6, 3 },
-							{ 9, 5, 2 } };
+		int[][] intArray = { { 1, 6, 3 }, { 9, 5, 2 } };
 
-		double[][] doubleArray = { { 1.2, 8.2, 2.2 }, 
-									{ 7.4, 2.1, 3.5 } };
+		double[][] doubleArray = { { 1.2, 8.2, 2.2 }, { 7.4, 2.1, 3.5 } };
 
 //		for (int i = 0; i < intArray.length; i++) {
 //			Arrays.sort(intArray[i]);
@@ -111,9 +107,12 @@ public class Work5 {
 		double bigOne = w.maxElement(doubleArray);
 		System.out.println(bigOne);
 
-	}
-}
+		System.out.println("================================================");
 
 //5.身為程式設計師的你，收到一個任務，要幫系統的註冊新增驗證碼的功能，請設計一個方法
 //genAuthCode()，當呼叫此方法時，會回傳一個8位數的驗證碼，此驗證碼內容包含了英文大小寫
 //與數字的亂數組合，如圖
+
+//		w.genAuthCode();
+	}
+}
