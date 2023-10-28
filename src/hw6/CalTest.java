@@ -7,7 +7,6 @@ public class CalTest {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		CalTest cc = new CalTest();
 		Calculator cal = new Calculator();
 
 		int[] user = new int[2];
