@@ -31,8 +31,7 @@ public class CalTest {
 				break;
 				
 			} catch (CalException c) {
-				System.out.println(c);
-			}
+				System.out.println(c.getMessage());			}
 		}
 	}
 

@@ -1,13 +1,14 @@
 package hw5;
 
-public abstract class Hero {
+public class Hero {
 	// 省略 getter/setter...
 	
 	private String name;
 	private int level;
 	private double exp;
-	
-	private Defend defendd;
+	private Defend de; //介面
+	private Attack at;
+	private Move mo;
 	
 	public Hero() {
 		this("David", 1, 0);
@@ -19,11 +20,15 @@ public abstract class Hero {
 		this.exp = exp;
 	}
 	
-	public abstract void attack();
+	public void setHero(Defend def, Attack att, Move moo) {
+		this.de = def;
+		this.at = att;
+		this.mo = moo;
+	}
 	
-	public abstract void move();
-	
-	public void goDefend() {
-		defendd.defend();
+	public void work() {
+		de.defendd();
+		at.attackk();
+		mo.movee();
 	}
 }

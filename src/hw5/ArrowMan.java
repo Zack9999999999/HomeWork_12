@@ -1,6 +1,6 @@
 package hw5;
 
-public class ArrowMan extends Hero implements Defend {
+public class ArrowMan extends Hero implements Defend, Move, Attack {
 	
 	public ArrowMan() {
 		super();
@@ -11,17 +11,17 @@ public class ArrowMan extends Hero implements Defend {
 	}
 
 	@Override
-	public void attack() {
+	public void attackk() {
 		System.out.println("放弓箭");
 	}
 
 	@Override
-	public void move() {
+	public void movee() {
 		System.out.println("跑步");
 	}
 
 	@Override
-	public void defend() {
+	public void defendd() {
 		System.out.println("做防禦動作");
 	}
 }
