@@ -25,7 +25,8 @@ public class Work5 {
 		int[] x = new int[10];
 		int sum = 0;
 
-		for (int i = 0; i < x.length; i++) {
+//		for (int i = 0; i < x.length; i++)
+		for (int i: x) {
 			x[i] = (int) (Math.random() * 101);
 			System.out.print(x[i] + " ");
 			sum += x[i];
@@ -43,14 +44,23 @@ public class Work5 {
 
 		int max = 0;
 
-		for (int i = 0; i < x.length; i++) {
-			for (int j = 0; j < x[i].length; j++) {
-				if (x[i][j] > max) {
-					max = x[i][j];
-				}
-			}
+//		for (int i = 0; i < x.length; i++) {
+//			for (int j = 0; j < x[i].length; j++) {
+//				if (x[i][j] > max) {
+//					max = x[i][j];
+//				}
+//			}
+//		}
 
-		}
+//for each
+		for (int[] i : x) {
+	        for (int j : i) {
+	            if (j > max) {
+	                max = j;
+	            }
+	        }
+	    }
+		
 		return max;
 
 	}
