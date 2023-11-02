@@ -2,8 +2,10 @@ package hw7;
 
 import java.io.EOFException;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 public class DogCat {
 
@@ -13,18 +15,35 @@ public class DogCat {
 
 //		File data = new File("C:\\data");
 //		data.mkdir();
-
+		
+//-----------------------------------------------------------
+		
+//		AnimalSpeak[] dogs = new Dog[2];
+//		AnimalSpeak[] cats = new Cat[2];
+		
+		
+		AnimalSpeak[] ani = new AnimalSpeak[4];
+		ani[0] = new Dog("smalldog");
+		ani[1] = new Dog("bigdog");
+		ani[2] = new Cat("smallcat");
+		ani[3] = new Cat("bigcat");
+		
+//-----------------------------------------------------------
+		
 //		Dog[] dogs = new Dog[2];
 //		Cat[] cats = new Cat[2];
-//		
 //		dogs[0] = new Dog("smalldog");
 //		dogs[1] = new Dog("bigdog");
 //		cats[0] = new Cat("smallcat");
 //		cats[1] = new Cat("bigcat");
-//		
-//		FileOutputStream fos = new FileOutputStream("C:\\data\\Object.ser");
-//		ObjectOutputStream oos = new ObjectOutputStream(fos);
-//		
+		
+		FileOutputStream fos = new FileOutputStream("C:\\data\\Object.ser");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		for(int i = 0; i < ani.length; i++) {
+			oos.writeObject(ani[i]);
+		}
+		
 //		for(int i = 0; i < dogs.length; i++) {
 //			oos.writeObject(dogs[i]);
 //		}
@@ -32,9 +51,9 @@ public class DogCat {
 //		for(int i = 0; i < cats.length; i++) {
 //			oos.writeObject(cats[i]);
 //		}
-//		
-//		oos.close();
-//		fos.close();
+		
+		oos.close();
+		fos.close();
 
 //承上題，請寫一個程式，能讀取Object.ser這四個物件，並執行speak()方法觀察結果如何 (請利用多型簡化本題的程式設計
 
@@ -43,16 +62,20 @@ public class DogCat {
 
 		try {
 			while (true) {
-				Object obj = ois.readObject();
+				
+				((AnimalSpeak) ois.readObject()).speak();
 
-				if (obj instanceof Dog)
-					((Dog)obj).speak();
-				else
-					((Cat)obj).speak();
+//				if (obj instanceof Dog)
+//					((Dog) obj).speak();
+//				else
+//					((Cat) obj).speak();
 
 			}
 		} catch (EOFException e) {
 		}
+
+		ois.close();
+		fis.close();
 	}
 
 }

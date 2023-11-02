@@ -2,7 +2,7 @@ package hw7;
 
 import java.io.Serializable;
 
-public class Cat implements Serializable {
+public class Cat implements Serializable, AnimalSpeak {
 	private static final long serialVersionUID = 1L;
 	
 	private String name;
