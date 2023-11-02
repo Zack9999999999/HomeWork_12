@@ -21,7 +21,7 @@ public class Copy {
 		FileReader read = new FileReader(fil1);
 		BufferedReader bufread = new BufferedReader(read);
 
-		FileWriter writ = new FileWriter(two);
+		FileWriter writ = new FileWriter(fil2);
 		BufferedWriter bufwrit = new BufferedWriter(writ);
 
 		while ((s = bufread.readLine()) != null) {
