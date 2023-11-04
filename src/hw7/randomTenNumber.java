@@ -23,6 +23,7 @@ public class randomTenNumber {
 			pr.println(ten);
 
 			bufwr.flush(); //疑問:沒加這行會Writer不進Data.txt
+							//解答:改用print即可解決
 		}
 
 		pr.close();
