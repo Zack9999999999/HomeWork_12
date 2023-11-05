@@ -22,7 +22,7 @@ public class Train implements Comparable<Train> {
 		return number;
 	}
 
-	private void setnumber() {
+	private void setnumber(int number) {
 		this.number = number;
 	}
 
@@ -30,7 +30,7 @@ public class Train implements Comparable<Train> {
 		return type;
 	}
 
-	private void settype() {
+	private void settype(String type) {
 		this.type = type;
 	}
 
@@ -38,7 +38,7 @@ public class Train implements Comparable<Train> {
 		return start;
 	}
 
-	private void setstart() {
+	private void setstart(String start) {
 		this.start = start;
 	}
 
@@ -46,7 +46,7 @@ public class Train implements Comparable<Train> {
 		return dest;
 	}
 
-	private void setdest() {
+	private void setdest(String dest) {
 		this.dest = dest;
 	}
 
@@ -54,7 +54,7 @@ public class Train implements Comparable<Train> {
 		return price;
 	}
 
-	private void setprice() {
+	private void setprice(double price) {
 		this.price = price;
 	}
 
