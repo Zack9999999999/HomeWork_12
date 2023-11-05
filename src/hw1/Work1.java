@@ -5,10 +5,11 @@ public class Work1 {
 	public static void main(String[] args) {
 //		1.請設計一隻Java程式,計算12,6這兩個數值的和與積
 
-		int i1 = 12;
-		int i2 = 6;
-		System.out.println(i1 + i2);
-		System.out.println(i1 * i2);
+		int i1 = 12, i2 = 6;
+		for (int i = 0; i < 1; i++) {
+			System.out.println("和: " + (i1 + i2));
+			System.out.println("積: " + (i1 * i2));
+		}
 
 //		2.請設計一隻Java程式,計算200顆蛋共是幾打幾顆? (一打為12顆)
 

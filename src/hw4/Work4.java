@@ -22,12 +22,16 @@ public class Work4 {
 //	(提示：String方法，陣列)
 
 		String s = "Hello World";
-		int howLong = s.length() - 1; // 字串長度 -1為了配合索引值跑迴圈
-		int down = howLong; // 給charAt當索引值用
+//		int howLong = s.length() - 1; // 字串長度 -1為了配合索引值跑迴圈
+//		int down = howLong; // 給charAt當索引值用
+//
+//		for (int i = 0; i <= howLong; i++) {
+//			char helloWorld = s.charAt(down--); // 取得down索引值的字 從10開始遞減 往前抓字元
+//			System.out.print(helloWorld);
+//		}
 
-		for (int i = 0; i <= howLong; i++) {
-			char helloWorld = s.charAt(down--); // 取得down索引值的字 從10開始遞減 往前抓字元
-			System.out.print(helloWorld);
+		for (int i = s.length() - 1; i >= 0; i--) {
+			System.out.print(s.charAt(i));
 		}
 
 		System.out.println("\n" + "===================================");
@@ -66,9 +70,7 @@ public class Work4 {
 
 		int howMany = 0; // 記人數
 
-		int[][] people = { { 25, 32, 8, 19, 27 }, 
-						   { 2500, 800, 500, 1000, 1200 } 
-						 };
+		int[][] people = { { 25, 32, 8, 19, 27 }, { 2500, 800, 500, 1000, 1200 } };
 
 		System.out.print("有錢可借的員工編號: ");
 
@@ -109,13 +111,9 @@ public class Work4 {
 
 		int[] top = new int[8]; // 統計次數
 
-		int[][] student = { { 10, 35, 40, 100, 90, 85, 75, 70 },
-							{ 37, 75, 77, 89, 64, 75, 70, 95 },
-							{ 100, 70, 79, 90, 75, 70, 79, 90 },
-							{ 77, 95, 70, 89, 60, 75, 85, 89 },
-							{ 98, 70, 89, 90, 75, 90, 89, 90 },
-							{ 90, 80, 100, 75, 50, 20, 99, 75 }
-						  };
+		int[][] student = { { 10, 35, 40, 100, 90, 85, 75, 70 }, { 37, 75, 77, 89, 64, 75, 70, 95 },
+				{ 100, 70, 79, 90, 75, 70, 79, 90 }, { 77, 95, 70, 89, 60, 75, 85, 89 },
+				{ 98, 70, 89, 90, 75, 90, 89, 90 }, { 90, 80, 100, 75, 50, 20, 99, 75 } };
 
 		int[] max = new int[8]; // 存最高分用
 
