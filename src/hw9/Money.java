@@ -28,7 +28,7 @@ class BearMom implements Runnable {
 
 	public void run() {
 		for (int i = 1; i <= 10; i++) {
-			System.out.println("mom跑了" + i + "次");
+//			System.out.println("mom跑了" + i + "次");
 			bank.give(2000);
 		}
 	}
@@ -44,7 +44,7 @@ class BadBear implements Runnable {
 
 	public void run() {
 		for (int i = 1; i <= 10; i++) {
-			System.out.println("bear跑了" + i + "次");
+//			System.out.println("bear跑了" + i + "次");
 			bank.take(1000);
 		}
 	}
@@ -59,7 +59,7 @@ class Bank {
 	synchronized public void give(int mon) {
 
 		try {
-			Thread.sleep(500);
+			Thread.sleep(300);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -70,11 +70,12 @@ class Bank {
 //		}
 		if (money > 3000) {
 			System.out.println("1.媽媽看到餘額在3000以上,不給了");
+			if (count == 10)
+				return;
 			notify();
 			System.out.println("1.壞熊被媽媽告知有錢花了!");
+
 			try {
-				if (count == 10)
-					return;
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
