@@ -33,6 +33,7 @@ public class ScMath {
 
 		case 3:
 		}
+
 		sc.close();
 	}
 
