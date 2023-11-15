@@ -37,8 +37,9 @@ public class ScMath {
 			Format n2 = new DecimalFormat("##%");
 			System.out.println("百分比: " + n2.format(number));
 		} else if (s1 == 3) {
-//			Format n3 = new DecimalFormat("0.0E0");
-//			System.out.println("科學記號: " + n3.format(number));
+			Format n3 = new DecimalFormat("0.0E0");
+			System.out.println("科學記號: " + n3.format(number)); // ??
+
 		}
 
 //		switch (s2) {
