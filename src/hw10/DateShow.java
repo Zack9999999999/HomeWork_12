@@ -9,7 +9,7 @@ public class DateShow {
 
 	public static void main(String[] args) throws ParseException {
 
-		String regex = "^\\d{4}[0 1]\\d[1-3]\\d$";
+		String regex = "^\\d{4}[0-1]\\d[0-3]\\d$";
 		String s1 = "";
 
 		Scanner sc = new Scanner(System.in);
@@ -40,9 +40,9 @@ public class DateShow {
 			sdfall = new SimpleDateFormat("dd/MM/yyyy");
 		}
 
-		String answer = sdfall.format(date);
+//		String answer = sdfall.format(date);
 
-		System.out.println(answer);
+		System.out.println(sdfall.format(date));
 
 		sc.close();
 	}
